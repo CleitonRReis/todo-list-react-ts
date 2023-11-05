@@ -1,0 +1,109 @@
+.wrapper {
+    /* border: 1px solid green; */
+
+    height: 100vh;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+form > input {
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    background: var(--gray-500);
+    color: var(--gray-100);
+    margin-right: 8px;
+}
+
+.btn {
+    background: var(--blue-dark);
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--gray-100);
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+button {
+    background: var(--blue-dark);
+    border: none;
+    color: var(--gray-100);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.headerFollowUp {
+    /* border: 1px solid red; */
+
+    width: 48rem;
+    margin-top: 4rem;
+    padding: 1rem;
+}
+
+.followUp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.createdTask {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.done {
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.spanDone, .spanCreated {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    border-radius: 40%;
+    padding: 2px 8px;
+    margin-left: 8px;
+    font-weight: 900;
+    line-height: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.tasksArea {
+    width: 46rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 1.5rem;
+    padding: 64px 24px;
+    color: var(--gray-300);
+}
+
+.tasksArea > img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.firstPInTasksArea {
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 700;
+    margin-top: 1rem;
+}

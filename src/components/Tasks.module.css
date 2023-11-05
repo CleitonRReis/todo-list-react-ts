@@ -1,0 +1,95 @@
+.tasks {
+    width: 46rem;
+    /* margin-top: 1.5rem; */
+}
+/* 
+.tasksArea {
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 1.5rem;
+    padding: 64px 24px;
+    color: var(--gray-300);
+}
+
+.tasksArea > img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.firstPInTasksArea {
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 700;
+    margin-top: 1rem;
+} */
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--gray-300);
+    background: var(--gray-500) ;
+    padding: 1rem;
+    margin-top: 1.25rem;
+    border-radius: 8px;
+    color: var(--gray-100);
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 1.87rem;
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.main input[type=checkbox] {
+    display: none;
+}
+
+.checkbox span {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    display: block;
+    position: absolute;
+    /* left: 0; */
+    /* top: 7px; */
+}
+
+.checkbox span:after {
+    content: '✓';
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--purple-dark);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.checkbox input[type=checkbox]:checked ~ span::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.main > p {
+    padding: 5px;
+}
+
+.trashIcon {
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.trashIcon:hover {
+    color: var(--red-danger);
+}
