@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Trash } from 'phosphor-react';
 
 import styles from './Tasks.module.css';
+import { ITask } from '../App';
 
 export interface TaskProps {
-    nameOfTask: string[];
-    done: boolean;
+    task: ITask;
 };
 
-export const Task = ({ nameOfTask, done }: TaskProps) => {
-    const [isChecked, setIsChecked] = useState(done);
+export const Task = ({ task }: TaskProps) => {
+    // const [isChecked, setIsChecked] = useState(done);
 
     return (
         <>
@@ -19,14 +19,14 @@ export const Task = ({ nameOfTask, done }: TaskProps) => {
                             <input
                                 type="checkbox"
                                 name="done"
-                                checked={isChecked}
-                                onChange={e => setIsChecked(e.target.checked)}
+                                // checked={isChecked}
+                                // onChange={e => setIsChecked(e.target.checked)}
                             />
                             <span className={styles.span}></span>
                          </label>
 
                         <p>
-                            {nameOfTask}
+                            {task.title}
                         </p>
 
                         <Trash size={24} className={styles.trashIcon} />

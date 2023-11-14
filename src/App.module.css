@@ -47,25 +47,25 @@ button {
     cursor: pointer;
 }
 
-.headerFollowUp {
+/* .headerFollowUp {
     /* border: 1px solid red; */
 
-    width: 48rem;
+    /* width: 48rem;
     margin-top: 4rem;
     padding: 1rem;
-}
+} */
 
-.followUp {
+/* .followUp {
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.createdTask {
+/* .createdTask {
     color: var(--blue);
     font-weight: 600;
-}
+} */
 
-.done {
+/* .done {
     color: var(--purple);
     font-weight: 600;
 }
@@ -78,7 +78,7 @@ button {
     margin-left: 8px;
     font-weight: 900;
     line-height: 15px;
-}
+} */
 
 .hide {
   display: none;
