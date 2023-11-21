@@ -1,32 +1,6 @@
 .tasks {
     width: 46rem;
-    /* margin-top: 1.5rem; */
 }
-/* 
-.tasksArea {
-    display: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    border-top: 1px solid var(--gray-300);
-    margin-top: 1.5rem;
-    padding: 64px 24px;
-    color: var(--gray-300);
-}
-
-.tasksArea > img {
-    width: 3.5rem;
-    height: 3.5rem;
-}
-
-.firstPInTasksArea {
-    font-size: 1rem;
-    line-height: 140%;
-    font-weight: 700;
-    margin-top: 1rem;
-} */
-
 
 .main {
     display: flex;
@@ -58,8 +32,6 @@
     border: 2px solid var(--blue);
     display: block;
     position: absolute;
-    /* left: 0; */
-    /* top: 7px; */
 }
 
 .checkbox span:after {

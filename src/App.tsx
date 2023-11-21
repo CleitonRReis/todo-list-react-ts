@@ -1,14 +1,11 @@
 import { PlusCircle } from 'phosphor-react';
 
 import { Header } from './components/Header';
-import { HeaderTasks } from './components/HeaderTasks'
-// import { Task } from './components/Task';
-
-// import clipBoard from './assets/Clipboard.svg';
+import { HeaderTasks } from './components/HeaderTasks';
 
 import './global.css';
 import styles from './App.module.css';
-import { ChangeEvent, FormEvent, /*FormEvent,*/ useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 export interface ITask {
   id: string;
@@ -17,23 +14,17 @@ export interface ITask {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<ITask[]>([
-    // {
-      // id: '1',
-      // title: 'Teste',
-      // done: false
-    // }
-  ]);
+  const [tasks, setTasks] = useState<ITask[]>([]);
   const [newTask, setNewTask] = useState('');
-
-  const handleTask = (titleTask: string) => {
+  
+  const handleTask = () => {
     event.preventDefault();
 
     setTasks([
       ...tasks,
       {
         id: crypto.randomUUID(),
-        title: titleTask,
+        title: newTask,
         done: false
       }
     ]);
@@ -45,12 +36,36 @@ export function App() {
     setNewTask(createNewTask);
   };
 
+  const handleStatusTask = (taskId: string) => {
+    const newStatusTask = tasks.map(task => {
+
+      if (taskId === task.id) {
+        return {
+          ...task,
+          done: !task.done
+        };
+      };
+
+      return task;
+    });
+
+    setTasks(newStatusTask);
+  };
+
+  const deleteTask = (taskIdDeleted: string) => {
+    const newTaskWithoutDeletedOne = tasks.filter(taskId => {
+      return taskId.id !== taskIdDeleted;
+    });
+
+    setTasks(newTaskWithoutDeletedOne);
+  };
+
   return (
     <>
       <Header />
       <div className={styles.wrapper}>
         <form onSubmit={handleTask} className={styles.input}>
-          <input 
+          <input
             type='text' 
             name='task'
             placeholder='New task'
@@ -65,21 +80,9 @@ export function App() {
 
         <HeaderTasks 
           tasks={tasks}
-          // countTasks={countTasks}
-          // checkStatus={checkStatus}
+          onChangeStatus={handleStatusTask}
+          onDelete={deleteTask}
         />
-
-        {/* <Task 
-          task={tasks}
-        /> */}
-
-        {/* <section className={tasks.length === 0 ? styles.tasksArea : styles.hide}>
-          <img src={clipBoard} alt="Clipboard" />
-          <p className={styles.firstPInTasksArea}>You don't have tasks registered yet</p>
-          <p>Create tasks and organize your to-do items</p>           
-        </section> */}
-        
-       
       </div>
     </>
   )

@@ -1,9 +1,32 @@
 .headerFollowUp {
-    /* border: 1px solid red; */
-
     width: 48rem;
     margin-top: 4rem;
     padding: 1rem;
+}
+
+
+.tasksArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 1.5rem;
+    padding: 64px 24px;
+    color: var(--gray-300);
+    width: 46rem;
+}
+
+.tasksArea > img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.firstPInTasksArea {
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 700;
+    margin-top: 1rem;
 }
 
 .followUp {
@@ -24,9 +47,13 @@
 .spanDone, .spanCreated {
     background: var(--gray-400);
     color: var(--gray-200);
-    border-radius: 40%;
-    padding: 2px 8px;
+    border-radius: 999px;
+    padding: 3px 9px;
     margin-left: 8px;
     font-weight: 900;
     line-height: 15px;
+}
+
+.hide {
+    display: none;
 }
